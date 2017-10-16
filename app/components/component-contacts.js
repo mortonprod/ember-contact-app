@@ -1,5 +1,7 @@
 import Ember from 'ember';
-
+/**
+ * This component deals with placing the contacts down and adding new ones.
+ */
 export default Ember.Component.extend({
   store: Ember.inject.service(),
   init()
@@ -7,6 +9,10 @@ export default Ember.Component.extend({
     this._super(...arguments);
   },
   actions: {
+    /**
+     * We add a new contact by giving it a unique id and saving this as a record to the store. 
+     * The unique id will just be one more than the highest current id.
+     */
     submit()
     {
       const input = {};
@@ -19,13 +25,11 @@ export default Ember.Component.extend({
       const contacts = store.peekAll('contact');
       const length = contacts.get("length");
 
-      console.log("contacts: " + contacts.indexOf(0) + " length: " + length);
       if (length > 0) {
         store.findAll('contact').then(function(contacts)
         {
           const count = contacts.get('length');
       
-          console.log(count);
           input.id = Number(contacts.objectAt(count-1).id) +1;
           saveInput(store,input);
         });
