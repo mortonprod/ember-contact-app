@@ -1,6 +1,6 @@
 # Introduction
 
-This is a small contact ember app. You can visit the app on github [here](https://mortonprod.github.io/ember-contact-app/)
+This is a small contact ember app. You can visit the app on github [here](https://mortonprod.github.io/ember-contact-app/). It tries to follow the PSR2 guidelines for coding style. It uses eslint and the plugin eslint-config-samrap to get this working with VSCode. However, another IDE could be used.
 
 It is not a production build since it is missing a few things
 
