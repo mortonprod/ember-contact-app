@@ -4,8 +4,7 @@ import config from './config/environment';
 const Router = Ember.Router.extend({location: config.locationType});
 
 /**
- * This will serve the contact route. 
- * This will be below the application template.
+ * This will serve the contact route through the index route.
  */
 Router.map(function()
 {
