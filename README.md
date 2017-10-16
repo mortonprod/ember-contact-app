@@ -8,6 +8,8 @@ It is not a production build since it is missing a few things
 * CSS not normalised
 * Documentation is not put online
 * No tests
+* No backend 
+  * This causes the error in google dev tools for the route */contacts* 
 
 However these can be easily added if you would like to.
 
