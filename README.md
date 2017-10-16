@@ -59,6 +59,8 @@ There are no tests for this simple app. However the build tools allow for this. 
 
 ## Further Reading / Useful Links
 
+If you would like to learn more about the tools I used see below
+
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://ember-cli.com/)
 * Development Browser Extensions
