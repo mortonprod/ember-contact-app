@@ -1,0 +1,11 @@
+{
+    "parser": "babel-eslint",
+    "extends": "samrap",
+    "rules": {
+        "indent": ["error", 2],
+        "max-len": ["error", 80],
+        "camelcase": ["error", {"properties": "never"}],
+        "brace-style": ["error", "allman"],
+        "space-before-function-paren":"off"
+    }
+}
