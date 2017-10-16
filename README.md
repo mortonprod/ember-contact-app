@@ -37,7 +37,7 @@ Then visit the site at [http://localhost:4200](http://localhost:4200).
 
 ## Updating gh-pages
 
-This app is just a simple example so we deploy to github pages. If you would like to update the app the use the  (github addon)[https://github.com/poetic/ember-cli-github-pages]. 
+This app is just a simple example so we deploy to github pages. If you would like to update the app the use the  [github addon](https://github.com/poetic/ember-cli-github-pages). 
 
 When you have this setup following installation instruction on the website. you just need to run the command below each time.
 ```
