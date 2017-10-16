@@ -1,6 +1,6 @@
-# Ember-contact-app
+# Introduction
 
-This is a small contact ember app. You can visit the app on github (here)[https://mortonprod.github.io/ember-contact-app/]
+This is a small contact ember app. You can visit the app on github [here](https://mortonprod.github.io/ember-contact-app/)
 
 It is not a production build since it is missing a few things
 
@@ -29,10 +29,13 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+To start the app in development run:
+```
+npm run start
+```
+Then visit the site at [http://localhost:4200](http://localhost:4200).
 
-### Updating gh-pages
+## Updating gh-pages
 
 This app is just a simple example so we deploy to github pages. If you would like to update the app the use the  (github addon)[https://github.com/poetic/ember-cli-github-pages]. 
 
@@ -42,14 +45,14 @@ git checkout master
 ember github-pages:commit --message "<Your commit>"
 ```
 
-### Running Tests
+## Running Tests
 
 There are no tests for this simple app. However the build tools allow for this. Just run the command below to see them run.
 
 * `ember test`
 * `ember test --server`
 
-### Building
+## Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
