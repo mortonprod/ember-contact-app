@@ -11,28 +11,18 @@ import Ember from 'ember';
  */
 export default Ember.Component.extend({
   tagName: '',
-  store: Ember.inject.service(),
+
   init()
   {
     this._super(...arguments);
   },
+
   actions: {
-    /**
-     * This is the only action we can take. 
-     * It uses the id passes to this component to remove this from the store.
-     * Note we only unload so we don't send a delete request over the network.
-     * This is done since we don't have a backend.
-     */
+    
     click()
     {
-      const store = this.get('store');
-
-      store.findRecord('contact', this.get("id"), {backgroundReload: false}).then(
-        function(contact)
-        {
-          contact.unloadRecord();
-        }
-      );
+      console.log("id: " + this.get("id"));
+      this.sendAction("removeContact",this.get("id"));
     },
   },
 });

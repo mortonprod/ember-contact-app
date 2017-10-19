@@ -6,6 +6,6 @@ import DS from 'ember-data';
  */
 export default DS.Model.extend({
   fullName: DS.attr("string"),
-  phoneNumber: DS.attr("number"),
-  mobileNumber: DS.attr("number"),
+  phoneNumber: DS.attr("string"),
+  mobileNumber: DS.attr("string"),
 });

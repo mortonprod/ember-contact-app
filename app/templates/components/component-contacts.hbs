@@ -1,49 +1,56 @@
 <section class="contacts">
-  <h2 class="contacts__title">Contact Information</h2>
-  <h3 class="contacts__subtitle"> Add New Contact </h3>
-  <form class="contacts__form" {{action "submit" on="submit"}}>
+  <h2 class="contacts-title">Contact Information</h2>
+  <h3 class="contacts-subtitle"> Add New Contact </h3>
+
+  <form class="contacts-form" {{action "submit" on="submit"}}>
     <div>
         <label for="fullName">Full Name</label>
-        {{input maxlength="30" placeholder="Alexander Morton" id="fullName" value=fullName required="required"}}
+        {{input maxlength="30" pattern="[a-zA-Z ]{9,25}" placeholder="Alexander Morton" id="fullName" value=fullName required="required"}}
     </div>
+
     <div>    
         <label for="phoneNumber">Phone No</label>
-        {{input maxlength="20" type="tel" pattern="^[0-9\-\+\s\(\)]*$" placeholder="5332197" id="phoneNumber" value=phoneNumber required="required"}}
+        {{input maxlength="20" type="tel" pattern="[0-9]{9,14}" placeholder="01415332197" id="phoneNumber" value=phoneNumber required="required"}}
     </div>    
+
     <div>
         <label for="mobileNumber">Mobile No</label>
-        {{input maxlength="20" type="tel" pattern="^[0-9\-\+\s\(\)]*$" placeholder="07397987811" id="mobileNumber" value=mobileNumber required="required"}}
+        {{input maxlength="20" type="tel" pattern="[0-9]{9,14}" placeholder="07397987811" id="mobileNumber" value=mobileNumber required="required"}}
     </div>
-    <div class="contacts__form__button" >    
-        <button type="submit">Submit</button>
+
+    <div class="contacts-form-button" >    
+        <button type="submit" class="btn btn-success">Submit</button>
     </div>
   </form>
-  <table class="contacts__table">
-  <thead class="contacts__head">
-    <tr class="contacts__tr">
-      <th>
-          Full Name
-      </th>
-      <th>
-          Phone No
-      </th>
-      <th>
-          Mobile No
-      </th>
-      <th>
-          Actions
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each contacts as |contact|}}
-    {{component-contact
-        id=contact.id
-        fullName=contact.fullName
-        phoneNumber=contact.phoneNumber
-        mobileNumber=contact.mobileNumber
-    }}
-    {{/each}}
-  </tbody>
+  
+  <table class="contacts-table">
+    <thead class="contacts-head">
+      <tr class="contacts-tr">
+        <th>
+            Full Name
+        </th>
+        <th>
+            Phone No
+        </th>
+        <th>
+            Mobile No
+        </th>
+        <th>
+            Actions
+        </th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      {{#each contacts as |contact|}}
+      {{component-contact
+          id=contact.id
+          fullName=contact.fullName
+          phoneNumber=contact.phoneNumber
+          mobileNumber=contact.mobileNumber
+          removeContact='removeContact'
+      }}
+      {{/each}}
+    </tbody>
   </table>
 </section>

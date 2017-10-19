@@ -1,15 +1,10 @@
 <tr class="contact">
+  <td>{{fullName}}</td>
+  <td>{{phoneNumber}}</td>
+  <td>{{mobileNumber}}</td>
+
   <td>
-    {{fullName}}
-  </td>
-  <td>
-    {{phoneNumber}}
-  </td>
-  <td>
-    {{mobileNumber}}
-  </td>
-  <td>
-    <button {{action "click"}}>
+    <button class="btn btn-danger contact-button" {{action 'click'}}>
       Remove
     </button>
   </td>
