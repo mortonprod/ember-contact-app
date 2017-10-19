@@ -10,8 +10,8 @@ export default Ember.Route.extend({
     this.get("store").createRecord('contact', {
       id: "0",
       fullName: 'Anna Smith',
-      phoneNumber: 01415777891,
-      mobileNumber: 07327227523,
+      phoneNumber: "01415777891",
+      mobileNumber: "07327227523",
     });
   },
 });
